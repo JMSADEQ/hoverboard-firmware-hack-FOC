@@ -10,16 +10,16 @@
 // Ubuntu: define the desired build variant here if you want to use make in console
 // or use VARIANT environment variable for example like "make -e VARIANT=VARIANT_NUNCHUK". Select only one at a time.
 #if !defined(PLATFORMIO)
-  #define VARIANT_ADC         // Variant for control via ADC input
-  #define VARIANT_USART       // Variant for Serial control via USART3 input
-  #define VARIANT_NUNCHUK     // Variant for Nunchuk controlled vehicle build
+  //#define VARIANT_ADC         // Variant for control via ADC input
+  //#define VARIANT_USART       // Variant for Serial control via USART3 input
+  //#define VARIANT_NUNCHUK     // Variant for Nunchuk controlled vehicle build
   #define VARIANT_PPM         // Variant for RC-Remote with PPM-Sum Signal
-  #define VARIANT_PWM         // Variant for RC-Remote with PWM Signal
-  #define VARIANT_IBUS        // Variant for RC-Remotes with FLYSKY IBUS
-  #define VARIANT_HOVERCAR    // Variant for HOVERCAR build
-  #define VARIANT_HOVERBOARD  // Variant for HOVERBOARD build
-  #define VARIANT_TRANSPOTTER // Variant for TRANSPOTTER build https://github.com/NiklasFauth/hoverboard-firmware-hack/wiki/Build-Instruction:-TranspOtter https://hackaday.io/project/161891-transpotter-ng
-  #define VARIANT_SKATEBOARD  // Variant for SKATEBOARD build
+  //#define VARIANT_PWM         // Variant for RC-Remote with PWM Signal
+  //#define VARIANT_IBUS        // Variant for RC-Remotes with FLYSKY IBUS
+  //#define VARIANT_HOVERCAR    // Variant for HOVERCAR build
+  //#define VARIANT_HOVERBOARD  // Variant for HOVERBOARD build
+  //#define VARIANT_TRANSPOTTER // Variant for TRANSPOTTER build https://github.com/NiklasFauth/hoverboard-firmware-hack/wiki/Build-Instruction:-TranspOtter https://hackaday.io/project/161891-transpotter-ng
+  //#define VARIANT_SKATEBOARD  // Variant for SKATEBOARD build
 #endif
 // ########################### END OF VARIANT SELECTION ############################
 
@@ -378,7 +378,7 @@
  * Right sensor board cable. Channel 1: steering, Channel 2: speed.
  * https://gist.github.com/peterpoetzi/1b63a4a844162196613871767189bd05
 */
-  // #define DUAL_INPUTS                     // ADC*(Primary) + PPM(Auxiliary). Uncomment this to use Dual-inputs
+   #define DUAL_INPUTS                     // ADC*(Primary) + PPM(Auxiliary). Uncomment this to use Dual-inputs
   #ifdef DUAL_INPUTS
     #define FLASH_WRITE_KEY       0x1104  // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
     #define CONTROL_ADC           0       // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
