@@ -378,7 +378,7 @@
  * Right sensor board cable. Channel 1: steering, Channel 2: speed.
  * https://gist.github.com/peterpoetzi/1b63a4a844162196613871767189bd05
 */
-   #define DUAL_INPUTS                     // ADC*(Primary) + PPM(Auxiliary). Uncomment this to use Dual-inputs
+   //#define DUAL_INPUTS                     // ADC*(Primary) + PPM(Auxiliary). Uncomment this to use Dual-inputs
   #ifdef DUAL_INPUTS
     #define FLASH_WRITE_KEY       0x1104  // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
     #define CONTROL_ADC           0       // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
@@ -443,7 +443,7 @@
   #if defined(CONTROL_PWM_RIGHT) && !defined(DUAL_INPUTS)
     #define DEBUG_SERIAL_USART2           // left sensor cable debug
   #elif defined(CONTROL_PWM_LEFT) && !defined(DUAL_INPUTS)
-    #define DEBUG_SERIAL_USART3           // right sensor cable debug
+    //#define DEBUG_SERIAL_USART3           // right sensor cable debug
   #endif
 #endif
 // ############################# END OF VARIANT_PWM SETTINGS ############################
